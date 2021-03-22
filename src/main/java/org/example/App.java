@@ -11,7 +11,6 @@ import java.io.IOException;
 
 
 import javafx.application.Application;
-//import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
@@ -48,32 +47,32 @@ public class App extends Application {
         root.getChildren().add(speed);
 
         // label distance
-        Label label = new Label();
-        GridPane.setConstraints(label, 10, 10);
-        label.setText("Расстояние");
-        label.setPrefSize(80,20);
-        root.getChildren().add(label);
+        Label labelDistance = new Label();
+        GridPane.setConstraints(labelDistance, 10, 10);
+        labelDistance.setText("Расстояние");
+        labelDistance.setPrefSize(80,20);
+        root.getChildren().add(labelDistance);
 
         // label speed
-        Label label1 = new Label();
-        GridPane.setConstraints(label1, 35, 10);
-        label1.setText("Скорость");
-        label1.setPrefSize(130,20);
-        root.getChildren().add(label1);
+        Label labelSpeed = new Label();
+        GridPane.setConstraints(labelSpeed, 35, 10);
+        labelSpeed.setText("Скорость");
+        labelSpeed.setPrefSize(130,20);
+        root.getChildren().add(labelSpeed);
 
         // label passing time
-        Label label3 = new Label();
-        GridPane.setConstraints(label3, 10, 20);
-        label3.setText("Время прохождения");
-        label3.setPrefSize(210,20);
-        root.getChildren().add(label3);
+        Label labelPTime = new Label();
+        GridPane.setConstraints(labelPTime, 10, 20);
+        labelPTime.setText("Время прохождения");
+        labelPTime.setPrefSize(210,20);
+        root.getChildren().add(labelPTime);
 
         // label time
-        Label label4 = new Label();
-        GridPane.setConstraints(label4, 20, 20);
-        //label4.setText("Время прохождения");
-        label4.setPrefSize(120,20);
-        root.getChildren().add(label4);
+        Label timeLabel = new Label();
+        GridPane.setConstraints(timeLabel, 20, 20);
+        //timeLabel.setText("Время прохождения");
+        timeLabel.setPrefSize(120,20);
+        root.getChildren().add(timeLabel);
 
         // button
         Button button = new Button();
@@ -85,7 +84,7 @@ public class App extends Application {
             float sp = Float.parseFloat(speed.getText());
             float time1 = dis / sp;
             String str = Float.toString(time1);
-            label4.setText(str);
+            timeLabel.setText(str);
         });
         root.getChildren().add(button);
 
